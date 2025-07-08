@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Experience Builder</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Parallax Experience Builder</h1>
+        </header>
+        
+        <div class="builder-container">
+            <div class="controls-panel">
+                <div class="layer-controls">
+                    <h2>Layers</h2>
+                    <div id="layers-list">
+                        <!-- Layers will be added here -->
+                    </div>
+                    <button id="add-layer-btn">Add Layer</button>
+                </div>
+                
+                <div class="text-controls">
+                    <h2>Text</h2>
+                    <input type="text" id="text-input" placeholder="Enter your text">
+                    <div class="text-options">
+                        <input type="color" id="text-color" value="#ffffff">
+                        <input type="range" id="text-size" min="10" max="72" value="24">
+                    </div>
+                </div>
+                
+                <div class="parallax-controls">
+                    <h2>Parallax Effect</h2>
+                    <label for="parallax-intensity">Intensity</label>
+                    <input type="range" id="parallax-intensity" min="1" max="10" value="5">
+                </div>
+                
+                <button id="generate-btn">Generate Experience</button>
+            </div>
+            
+            <div class="preview-panel">
+                <div class="phone-mockup">
+                    <div class="phone-screen" id="preview-container">
+                        <!-- Parallax preview will render here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="qr-modal" id="qr-modal">
+            <div class="modal-content">
+                <h2>Your Parallax Experience is Ready!</h2>
+                <div id="qr-code"></div>
+                <p>Scan this QR code to view on your phone</p>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/parallax.js"></script>
+    <script src="src/js/qrcode.js"></script>
+</body>
+</html>
